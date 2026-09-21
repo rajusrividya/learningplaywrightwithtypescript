@@ -17,8 +17,8 @@ test("Hover over @vibium.bsky.social on the first post and verify follower count
 
     // Step 3: Verify the followers are 29 or any other number you see
     const hoverCardFollowers = followersLinks.last();
-    const ariaLabel = await hoverCardFollowers.getAttribute("aria-label");
-    const followerCount = Number(ariaLabel?.match(/\d+/)?.[0]);
+    const ariaLabel = (await hoverCardFollowers.getAttribute("aria-label")) as string;
+    const followerCount = Number(ariaLabel.split(" ")[0]);
 
     expect(Number.isInteger(followerCount)).toBe(true);
     expect(followerCount).toBeGreaterThanOrEqual(0);
