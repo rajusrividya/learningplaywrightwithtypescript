@@ -9,8 +9,8 @@ test.beforeEach(async ({}, testInfo) => {
 
 test("baseURL - relative paths resolve against the config baseURL", async ({ page }) => {
     await page.goto("/checkboxes");
-    await expect(page).toHaveURL("https://the-internet.herokuapp.com/checkboxes");
-    await expect(page.locator("h3")).toHaveText("Checkboxes");
+    await expect(page).toHaveURL("https://practice.expandtesting.com/checkboxes");
+    await expect(page.locator("h1")).toHaveText("Sample Checkboxes page for practice test automation");
 });
 
 test("viewport - browser window uses the config size", async ({ page }) => {
@@ -18,7 +18,6 @@ test("viewport - browser window uses the config size", async ({ page }) => {
 });
 
 test("locale and timezoneId - browser reports the config values", async ({ page }) => {
-    await page.goto("/");
     const { locale, timeZone } = await page.evaluate(() => Intl.DateTimeFormat().resolvedOptions());
     expect(locale).toBe("en-GB");
     expect(timeZone).toBe("Europe/Amsterdam");

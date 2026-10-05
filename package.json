@@ -11,6 +11,6 @@
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.5.0",
     "csv-parse": "^7.0.3",
-    "mysql2": "^3.24.5"
+    "mssql": "^12.7.4"
   }
 }

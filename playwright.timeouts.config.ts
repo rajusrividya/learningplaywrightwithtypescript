@@ -37,7 +37,7 @@ export default defineConfig({
     navigationTimeout: 20_000,
 
     /* page.goto('/checkboxes') resolves against this */
-    baseURL: 'https://the-internet.herokuapp.com',
+    baseURL: 'https://practice.expandtesting.com',
     headless: true,
     viewport: { width: 1366, height: 768 },
     locale: 'en-GB',
