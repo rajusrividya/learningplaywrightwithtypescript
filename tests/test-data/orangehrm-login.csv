@@ -1,0 +1,6 @@
+testName,username,password,expected
+valid credentials,Admin,admin123,success
+wrong password,Admin,wrong123,invalid
+wrong username,NoSuchUser,admin123,invalid
+empty username,,admin123,required
+empty password,Admin,,required
