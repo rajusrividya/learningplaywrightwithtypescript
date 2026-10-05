@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("Open iFrame and verify the text inside the editor", async ({ page }) => {
     // Step 1: Go to https://the-internet.herokuapp.com/frames
-    await page.goto("https://the-internet.herokuapp.com/frames");
+    await page.goto("https://the-internet.herokuapp.com/frames", { waitUntil: "domcontentloaded" });
 
     // Step 2: Click on "iFrame"
     await page.getByRole("link", { name: "iFrame" }).click();
